@@ -37,11 +37,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start;  
 }
 
+*, ::after, ::before {
+    box-sizing: unset !important;
+  }
+
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--cLinks);
 }
 
@@ -66,6 +70,11 @@ i {
 .columnas {
     display: flex;
     flex-direction: column;
+}
+
+.filas {
+    display: flex;
+    flex-direction: row;
 }
 
 h2 {
@@ -784,7 +793,7 @@ footer a {
     width: inherit;
     height: 3.5rem;
     padding: 0.5rem;
-    background-color: var(--cBold);
+    background-color: var(--cAcento);
     position: sticky;
     display: flex;
     flex-direction: row;
@@ -808,6 +817,7 @@ footer a {
 
 .tienda_tools a {
    transition: 0.3s;
+   color: var(--cAcento);
 }
 
 .tienda_tools a:hover {
@@ -817,11 +827,39 @@ footer a {
 
 .tienda_items {
     background-color: var(--cBold);
-    padding: 1rem;
+    padding: 1rem 1.8rem;
     margin: 20rem 1rem 0 1rem;
     height: fit-content;
     width: 75rem;
 }
+
+.tienda_articulo {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cTexto);
+}
+
+.tienda_articulo_titulo {
+    font-family: var(--fTituloE);
+    color: var(--cBold);
+    font-size: 2.5rem;
+}
+
+.tiendas_articulo_informacion {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tienda_articulo_descripcion {
+    background-color: red;
+    color: var(--cTextoO);
+    width: 19rem;
+}
+
+.tienda_articulo_boton {
+
+}
+
 
 .footer_Chico {
     justify-content: end;
