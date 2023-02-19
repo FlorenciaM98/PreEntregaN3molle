@@ -495,15 +495,23 @@ footer a {
     height: fit-content;
 }
 
+.tiendaPage_Header {
+    height: inherit;
+    position: static;
+    width: fit-content;
+    background-color: var(--cTerciario); 
+}
+
 #navbar_Extended-Left {
-    height: 100%;
+    height: fit-content;
     min-height: 50rem;
     width: fit-content;
     padding: 1rem;
-    background-color: var(--cTerciario);
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 #navbar_Extended-Left img {
@@ -524,12 +532,6 @@ footer a {
     justify-content: left;
     width: -moz-available;
     width: -webkit-fill-available;
-}
-
-.tiendaPage_Header {
-    height: inherit;
-    position: sticky;
-    width: fit-content; 
 }
 
 .tiendaPage_Main {
@@ -555,6 +557,8 @@ footer a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 .tienda_tools img {
@@ -606,11 +610,6 @@ footer a {
     font-size: 2.2rem;
 }
 
-.tiendas_articulo_informacion {
-    align-items: center;
-    justify-content: space-between;
-}
-
 .tienda_articulo_descripcion {
     color: var(--cTextoO);
     width: -moz-available;
@@ -643,7 +642,7 @@ footer a {
     padding-right: 10rem;
 }
 
-/* Pagina responsive menos tienda y fanpage */
+/* Pagina responsive */
 
 @media (max-width: 1000px) or (max-height: 900px) {
 
@@ -783,6 +782,14 @@ footer a {
         color: var(--cTextoO);    
     }
 
+    .footer_Chico {
+        justify-content: space-between;
+        gap: 1rem;
+        padding-right: 0.5rem;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        }
+
     /* Pagina sobre nosotros y contacto responsive */
 
     #nosotros-Contenedor, #contacto-Contenedor {
@@ -877,6 +884,45 @@ footer a {
     .contacto-redesSociales {
         width: 100%;
         justify-content: center;
+    }
+
+/* Tienda responsive */
+
+    #tiendaPage_Fila {
+        flex-direction: column;
+    }
+
+    .tiendaPage_Header {
+    min-height: 4.5rem;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    margin-bottom: 0;
+    }
+
+    #navbar_Extended-Left {
+    height: fit-content;
+    min-height: unset;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    #navbar_Extended-Left img {
+    display: none;
+    }
+
+    #navbar_Extended-Left ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    .tienda_itemsContenedor {
+    margin: 0;
+    height: fit-content;
+    width: -moz-available;
+    width: -webkit-fill-available;
     }
     
 }
