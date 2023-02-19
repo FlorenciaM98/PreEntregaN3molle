@@ -346,16 +346,15 @@ footer a {
     border-radius: 0;
 }
 
-#navbar_Extended ul {
+#navbar_Extended ul, #navbar_Extended-Left ul {
     list-style-type: none;
-    gap: 0.5rem;
     padding:  0;
     width: fit-content;
     gap: 0.5rem;
     align-items: center;
 }
 
-#navbar_Extended ul li {
+#navbar_Extended ul li, #navbar_Extended-Left ul li {
     border-radius: 2.5rem;
     width: 13rem;
     padding: 0.5rem;
@@ -363,7 +362,7 @@ footer a {
     text-align: center;    
 }
 
-#navbar_Extended ul li a {
+#navbar_Extended ul li a, #navbar_Extended-Left ul li a {
     text-transform: uppercase;
     font-size: 1.1rem;
     color: var(--cTextoO);
@@ -371,12 +370,12 @@ footer a {
     transition: 0.3s;
 }
 
-#navbar_Extended ul li a:hover {
+#navbar_Extended ul li a:hover, #navbar_Extended-Left ul li a:hover {
     transition: 0.3s;
     color: var(--cItalic);
 }
 
-#navbar_Extended ul li:first-child {
+#navbar_Extended ul li:first-child,#navbar_Extended-Left ul li:first-child {
     font-family: var(--fTituloP);
     background-color: var(--cTerciario);
     border-radius: 0;
@@ -481,30 +480,7 @@ footer a {
     transition: 0.3s;
 }
 
-/* Fan-page y Tienda */
-
-#sideBar {
-    height: inherit;
-    min-height: 50rem;
-    width: fit-content;
-    padding: 1rem;
-    background-color: var(--cTerciario);
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-.footer_Chico {
-    justify-content: end;
-    gap: 25%;
-    padding-right: 10rem;
-}
-
-
-
-
-
-/* Pagina responsive */
+/* Pagina responsive menos tienda y fanpage */
 
 @media (max-width: 1000px) or (max-height: 900px) {
 
@@ -749,3 +725,106 @@ footer a {
                 margin: 1rem auto 0 7rem;
         }
 }      
+
+
+/* Fan-page y Tienda */
+
+#navbar_Extended-Left {
+    height: 100%;
+    min-height: 50rem;
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--cTerciario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar_Extended-Left img {
+    width: 15rem;
+    height: 23rem;
+    border-radius: 0;
+}
+
+#navbar_Extended-Left ul {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#tiendaPage_Fila {
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    justify-content: left;
+    width: -moz-available;
+    width: -webkit-fill-available;
+}
+
+.tiendaPage_Header {
+    height: inherit;
+    position: sticky;
+    width: fit-content; 
+}
+
+.tiendaPage_Main {
+    width: inherit;
+}
+
+.tienda_contenedor {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tienda_tools {
+    width: inherit;
+    height: 3.5rem;
+    padding: 0.5rem;
+    background-color: var(--cBold);
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tienda_tools img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.tienda_tools i {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--cTextoO);
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.tienda_tools a {
+   transition: 0.3s;
+}
+
+.tienda_tools a:hover {
+    transition: 0.3s;
+    color: var(--cItalic);
+}
+
+.tienda_items {
+    background-color: var(--cBold);
+    padding: 1rem;
+    margin: 20rem 1rem 0 1rem;
+    height: fit-content;
+    width: 75rem;
+}
+
+.footer_Chico {
+    justify-content: end;
+    gap: 25%;
+    padding-right: 10rem;
+}
