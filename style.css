@@ -495,7 +495,7 @@ footer a {
     height: fit-content;
 }
 
-.tiendaPage_Header {
+.tiendaFanPage_Header {
     height: inherit;
     position: static;
     width: fit-content;
@@ -526,7 +526,7 @@ footer a {
     flex-direction: column;
 }
 
-#tiendaPage_Fila {
+#tiendaFanPage_Fila {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -640,6 +640,14 @@ footer a {
     justify-content: end;
     gap: 25%;
     padding-right: 10rem;
+}
+
+.fanPage_Main {
+    background-color: darkblue;
+}
+
+.fanPage_Galeria {
+    background-color: darkcyan;
 }
 
 /* Pagina responsive */
@@ -886,13 +894,13 @@ footer a {
         justify-content: center;
     }
 
-/* Tienda responsive */
+/* Tienda  y Fanpage responsive */
 
-    #tiendaPage_Fila {
+    #tiendaFanPage_Fila {
         flex-direction: column;
     }
 
-    .tiendaPage_Header {
+    .tiendaFanPage_Header {
     min-height: 4.5rem;
     width: -moz-available;
     width: -webkit-fill-available;
