@@ -613,6 +613,7 @@ footer a {
 .tienda_articulo_descripcion {
     color: var(--cTextoO);
     width: -moz-available;
+    width: -webkit-fill-available;
     height: 6rem;
     overflow-y: auto;
     overflow-x: hidden;
@@ -643,11 +644,54 @@ footer a {
 }
 
 .fanPage_Main {
-    background-color: darkblue;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: inherit;
 }
 
-.fanPage_Galeria {
-    background-color: darkcyan;
+#carouselExampleCaptions, .carousel-inner {
+    height: 40rem;
+}
+
+.carousel-item img {
+    height: 400px;
+}
+
+.fanPage_Contenedor {
+    background-color: yellow;
+    margin-top: 1rem;
+    height: fit-content;
+    padding: 1rem;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "titulo galeria"
+                         "intro galeria"
+                         "slider galeria"
+                         "slider infoExtra";
+    column-gap: 1rem;
+    row-gap: 1rem;  
+}
+
+.fanPage_Contenedor_gridItem-titulo {
+    grid-area: titulo;
+}
+
+.fanPage_Contenedor_gridItem-galeria {
+    grid-area: galeria;
+}
+
+.fanPage_Contenedor_gridItem-intro {
+    grid-area: intro;
+}
+
+.fanPage_Contenedor_gridItem-slider {
+    grid-area: slider;
+}
+
+.fanPage_Contenedor_gridItem-infoExtra {
+    grid-area: infoExtra;
 }
 
 /* Pagina responsive */
