@@ -1,0 +1,20 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WickedDarkness/ProyectoFinal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WickedDarkness/ProyectoFinal/issues"
+  },
+  "homepage": "https://github.com/WickedDarkness/ProyectoFinal#readme"
+}
