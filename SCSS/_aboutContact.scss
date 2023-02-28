@@ -1,0 +1,318 @@
+/* Sobre nosotros y contacto */
+
+#nosotros-Contenedor,
+#contacto-Contenedor {
+  width: 760px;
+  height: 480px;
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: $cTerciario;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+#nosotros-Header,
+#contacto-Header {
+  width: fit-content;
+}
+
+#navbar_Extended {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+  width: 20rem;
+  height: 30.5rem;
+  border-radius: 0;
+}
+
+  ul {
+  list-style-type: none;
+  padding: 0;
+  width: fit-content;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+  li {
+  border-radius: 2.5rem;
+  width: 13rem;
+  padding: 0.5rem;
+  background-color: $cAcento;
+  text-align: center;
+}
+
+  a {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: $cTextoO;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+  a:hover {
+  transition: 0.3s;
+  color: $cItalic;
+}
+
+li:first-child {
+  font-family: $fTituloP;
+  background-color: $cTerciario;
+  border-radius: 0;
+  font-size: 1.3rem;
+  width: 14rem;
+  text-align: center;
+  color: $cAcento;
+}
+}
+
+#navbar_Extended-Left  {
+    
+    ul {
+  list-style-type: none;
+  padding: 0;
+  width: fit-content;
+  gap: 0.5rem;
+  align-items: center;
+  }
+
+  li {
+  border-radius: 2.5rem;
+  width: 13rem;
+  padding: 0.5rem;
+  background-color: $cAcento;
+  text-align: center;
+}
+
+  a {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: $cTextoO;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+  a:hover {
+  transition: 0.3s;
+  color: $cItalic;
+}
+
+li:first-child {
+  font-family: $fTituloP;
+  background-color: $cTerciario;
+  border-radius: 0;
+  font-size: 1.3rem;
+  width: 14rem;
+  text-align: center;
+  color: $cAcento;
+}
+}
+
+#nosotros-Info,
+#contacto-Info {
+  width: 55rem;
+  height: 48rem;
+
+  h2 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  font-size: 2.3rem;
+  color: $cSecundario;
+}
+}
+
+.nosotros-Logotipo,
+.contacto-Logotipo {
+  position: absolute;
+  margin-left: 34rem;
+  margin-top: -15rem;
+  width: 18rem;
+  height: 18rem;
+
+  p {
+  margin-top: 5rem;
+  font-size: 1.6rem;
+  height: 21rem;
+}
+}
+
+
+.nosotros-Local {
+  width: 55rem;
+  height: 16.1rem;
+  margin-top: 1rem;
+  border-bottom-left-radius: 2.5rem;
+  opacity: 0.6;
+}
+
+.contacto-forma {
+  background-color: $cBold;
+  width: 53rem;
+  height: 25rem;
+  margin-top: 3rem;
+  padding: 1rem;
+
+  form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+label {
+  font-family: $fCuerpo;
+  color: $cLinks;
+}
+}
+
+.contacto-Contacto {
+  display: flex;
+  flex-direction: row;
+  width: 55rem;
+  margin-top: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  justify-content: start;
+  gap: 2rem;
+  font-size: 1.4rem;
+  color: $cSecundario;
+
+  i {
+  margin-right: 5px;
+  color: $cLinks;
+}
+}
+
+.contacto-redesSociales {
+  width: 55rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4.5rem;
+
+  a {
+  transition: 0.3s;
+}
+
+a:hover {
+  color: $cSecundario;
+  transition: 0.3s;
+}
+}
+
+
+ /* Pagina sobre nosotros y contacto responsive */
+
+@media (max-width: 1000px) or (max-height: 900px) {
+
+  #nosotros-Contenedor,
+  #contacto-Contenedor {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.5rem;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #nosotros-Header,
+  #contacto-Header {
+    width: 100%;
+  }
+
+  #navbar_Extended {
+    width: 100%;
+
+    img {
+    width: 20rem;
+    height: 30.5rem;
+    border-radius: 0;
+  }
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  li:first-child {
+    width: 100%;
+  }
+}
+
+  #nosotros-Info,
+  #contacto-Info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    padding: 0;
+    font-size: 2.2rem;
+    color: $cItalic;
+  }
+
+  p {
+    margin: 1.5rem auto 1rem auto;
+    font-size: 1.6rem;
+    height: fit-content;
+    width: 80%;
+    padding: 0;
+  }
+  }
+
+  .nosotros-Logotipo,
+  .contacto-Logotipo {
+    display: none;
+  }
+
+  .nosotros-Local {
+    width: unset;
+    min-width: 400px;
+    height: 16.1rem;
+    margin: 1rem auto 1.5rem auto;
+    border-radius: 0;
+  }
+
+  .contacto-forma {
+    width: 90%;
+    padding: 1rem;
+    height: 27rem;
+    margin: 1.5rem auto 0 auto;
+  }
+
+  .contacto-Contacto {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .contacto-redesSociales {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,279 @@
+/* Fan-page y Tienda */
+
+#body_tienda {
+  height: fit-content;
+}
+
+.tiendaFanPage_Header {
+  height: inherit;
+  position: static;
+  width: fit-content;
+  background-color: $cTerciario;
+}
+
+#navbar_Extended-Left {
+  height: fit-content;
+  min-height: 50rem;
+  width: fit-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+
+  img {
+  width: 15rem;
+  height: 23rem;
+  border-radius: 0;
+}
+
+ul {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+}
+
+#tiendaFanPage_Fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.tiendaPage_Main {
+  width: inherit;
+}
+
+.tienda_contenedor {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tienda_tools {
+  width: inherit;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background-color: $cAcento;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+  img {
+  width: 4rem;
+  height: 4rem;
+}
+
+i {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: $cTextoO;
+  line-height: 3.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+a {
+  transition: 0.3s;
+  color: $cAcento;
+}
+
+a:hover {
+  transition: 0.3s;
+  color: $cItalic;
+}
+}
+
+.tienda_itemsContenedor {
+  background-color: $cBold;
+  padding: 1rem 1.8rem;
+  margin: 20rem 1rem 3rem 1rem;
+  height: fit-content;
+  width: 75rem;
+}
+
+.tienda_articulo {
+  display: flex;
+  flex-direction: column;
+  background-color: $cTexto;
+
+  img {
+  min-width: 24.1rem;
+  min-height: 24.1rem;
+}
+}
+
+.tienda_articulo_titulo {
+  font-family: $fTituloE;
+  color: $cBold;
+  font-size: 2.2rem;
+}
+
+.tienda_articulo_descripcion {
+  color: $cTextoO;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  height: 6rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.tienda_articulo_boton {
+  width: 4rem;
+  height: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: $cItalic;
+  color: $cBold;
+  transition: 0.3s;
+}
+
+.tienda_articulo_boton:hover {
+  color: $cTextoO;
+  transition: 0.3s;
+}
+
+.footer_Chico {
+  justify-content: end;
+  gap: 25%;
+  padding-right: 10rem;
+}
+
+.fanPage_Main {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  height: inherit;
+}
+
+.fanPage_Galeria #carouselExampleCaptions,
+.fanPage_Galeria .carousel-inner {
+  height: 40rem;
+}
+
+.fanPage_Galeria .carousel-item img {
+  height: 400px;
+}
+
+.fanPage_Contenedor {
+  background-color: $cBold;
+  height: fit-content;
+  padding: 1rem;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "titulo galeria"
+    "intro galeria"
+    "slider galeria"
+    "slider infoExtra";
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  margin-top: -1rem;
+}
+
+.fanPage_Contenedor_gridItem-titulo {
+  grid-area: titulo;
+  height: 5rem;
+  line-height: 5rem;
+  color: $cAcento;
+  font-family: $fTituloP;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.fanPage_Contenedor_gridItem-intro {
+  grid-area: intro;
+  text-align: justify;
+  color: $cTextoO;
+  font-size: 1.2rem;
+  background-color: $cLinks;
+  padding: 1rem;
+}
+
+.fanPage_Contenedor_gridItem-slider {
+  grid-area: slider;
+}
+
+.fanPage_Contenedor_gridItem-infoExtra {
+  grid-area: infoExtra;
+}
+
+.accordion-button {
+  width: -moz-available !important;
+  width: -webkit-fill-available !important;
+}
+
+.fanPage_Contenedor_gridItem-galeria {
+  grid-area: galeria;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1000px) or (max-height: 900px) {
+
+  /* Tienda  y Fanpage responsive */
+
+  #tiendaFanPage_Fila {
+    flex-direction: column;
+  }
+
+  .tiendaFanPage_Header {
+    min-height: 4.5rem;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    margin-bottom: 0;
+  }
+
+  #navbar_Extended-Left {
+    height: fit-content;
+    min-height: unset;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+    display: none;
+  }
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  } 
+
+  .tienda_itemsContenedor {
+    margin: 0;
+    height: fit-content;
+    width: -moz-available;
+    width: -webkit-fill-available;
+  }
+
+  .fanPage_Contenedor {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "intro"
+      "slider"
+      "infoExtra"
+      "galeria";
+  }
+}
