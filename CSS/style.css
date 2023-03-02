@@ -3,6 +3,7 @@
   font-family: "Akira";
   src: url(https://dl.dropbox.com//s/lijlld51wdfm4s4/Akira%20Expanded%20Demo.otf?dl=0) format("opentype");
 }
+/* Globals */
 html {
   font-size: 62.5%;
   margin: 0;
@@ -114,7 +115,7 @@ footer a {
     flex-direction: column;
     justify-content: space-between;
   }
-  /* Footer responsive*/
+  /* Footer */
   footer {
     padding: 0.5rem;
     font-size: 1.2rem;
