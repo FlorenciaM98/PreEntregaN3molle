@@ -526,7 +526,7 @@ main {
 #nosotros-Info,
 #contacto-Info {
   width: 55rem;
-  height: 48rem;
+  height: 46rem;
 }
 #nosotros-Info h2,
 #contacto-Info h2 {
@@ -555,8 +555,8 @@ main {
 .nosotros-Local {
   width: 55rem;
   height: 16.1rem;
-  margin-top: 1rem;
-  border-bottom-left-radius: 2.5rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 2rem;
   opacity: 0.6;
 }
 
