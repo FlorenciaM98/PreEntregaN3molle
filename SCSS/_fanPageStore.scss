@@ -16,8 +16,7 @@
   min-height: 50rem;
   width: fit-content;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  @include columnas;
   align-items: center;
   position: sticky;
   top: 0;
@@ -30,14 +29,12 @@
 
 ul {
   gap: 0.5rem;
-  display: flex;
-  flex-direction: column;
+  @include columnas;
 }
 }
 
 #tiendaFanPage_Fila {
-  display: flex;
-  flex-direction: row;
+  @include filas;
   justify-content: left;
   width: -moz-available;
   width: -webkit-fill-available;
@@ -51,8 +48,7 @@ ul {
   width: -moz-available;
   width: -webkit-fill-available;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  @include columnas;
   align-items: center;
 }
 
@@ -62,8 +58,7 @@ ul {
   padding: 0.5rem;
   background-color: $cAcento;
   position: sticky;
-  display: flex;
-  flex-direction: row;
+  @include filas;
   align-items: center;
   justify-content: space-between;
   position: sticky;
@@ -103,8 +98,7 @@ a:hover {
 }
 
 .tienda_articulo {
-  display: flex;
-  flex-direction: column;
+  @include columnas;
   background-color: $cTexto;
 
   img {

@@ -18,3 +18,15 @@ $fEspecial: "Nanum Pen Script", cursive;
   src: url(https://dl.dropbox.com//s/lijlld51wdfm4s4/Akira%20Expanded%20Demo.otf?dl=0)
     format("opentype");
 }
+
+/* Mixings */
+
+@mixin columnas {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin filas {
+  display: flex;
+  flex-direction: row;
+}
