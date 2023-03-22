@@ -977,5 +977,40 @@ main {
     grid-template-areas: "titulo" "intro" "slider" "infoExtra" "galeria";
   }
 }
+/* Error pages */
+#notFound {
+  width: 100%;
+  height: 100%;
+}
+#notFound .notFound-contenedor {
+  width: 60rem;
+  height: fit-content;
+  margin: 5% auto 0 auto;
+  background-color: #644666;
+  padding: 0rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 2.5rem;
+}
+#notFound .notFound-contenedor h1 {
+  color: #bf8275;
+  font-size: 20px;
+  text-align: center;
+}
+#notFound .notFound-contenedor p strong a {
+  color: #f2d7b6;
+}
+
+@media (max-width: 1000px) or (max-height: 900px) {
+  #notFound .notFound-contenedor p strong a {
+    color: #bf8275;
+  }
+}
+@media (max-width: 700px) {
+  #notFound .notFound-contenedor {
+    width: 70%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
