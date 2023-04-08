@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables */
 @font-face {
   font-family: "Akira";
@@ -977,6 +978,13 @@ main {
     grid-template-areas: "titulo" "intro" "slider" "infoExtra" "galeria";
   }
 }
+/* Botón compra */
+.botonCompra {
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+}
+
 /* Error pages */
 #notFound {
   width: 100%;
