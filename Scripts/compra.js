@@ -15,3 +15,5 @@ function compra() {
          alert("Ingresaste un número incorrecto");
     }
 }
+
+//script para elegir un numero de producto
