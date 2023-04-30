@@ -27,6 +27,16 @@ body {
   align-items: flex-start;
 }
 
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 10px !important;
+  background: #723844 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bf8275 !important;
+}
+
 *,
 ::after,
 ::before {
@@ -844,6 +854,8 @@ main {
   overflow-x: hidden;
   text-align: right;
   margin-right: 1rem;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .tienda_articulo_boton {

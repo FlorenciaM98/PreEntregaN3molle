@@ -20,6 +20,14 @@ body {
   align-items: flex-start;
 }
 
+::-webkit-scrollbar {
+ width: 5px !important;
+ height: 10px !important;
+ background: $cTerciario !important;}
+
+::-webkit-scrollbar-thumb {
+ background: $cAcento !important;}
+
 *,
 ::after,
 ::before {
