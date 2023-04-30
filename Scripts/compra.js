@@ -49,7 +49,8 @@
 Luego, al ir hasta la barra superior, al apretar el boton de la tarjeta de credito se suman 
 todos los productos seleccionados + su iva y luego se muestra el total por consola y por alert. */
 
- class Producto {
+// Clase que crea mis productos cuando los sumo
+class Producto {
     constructor(codigo, nombre, id, precio) {
       this.codigo = codigo;
       this.nombre = nombre;
@@ -62,13 +63,19 @@ todos los productos seleccionados + su iva y luego se muestra el total por conso
    }
 }
 
+// Array y funcion que agrega los productos seleccionados a dicho array
 const productos = []
 function addToCart(codigo, nombre, id, precio) {
   productos.push(new Producto(codigo, nombre, id, precio));
 }
 
+// Una salida por consola para verificar el proceso
 console.log(productos);
 
+//Funcion que calcula el iva de los productos de forma individual
+// y luego recorre el array de productos para sumar uno a uno en una variable
+// llamada total. Finalmente una salida por alert para el usuario y una por consola para el 
+// programador.
 function comprar(productos) {
   let total = 0;
   for (const producto of productos) producto.sumaIva();
