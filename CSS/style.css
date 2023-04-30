@@ -799,6 +799,8 @@ main {
   line-height: 3.5rem;
   text-align: center;
   font-size: 1.8rem;
+  cursor: pointer;
+  color: #bf8275;
 }
 .tienda_tools a {
   transition: 0.3s;
@@ -853,6 +855,7 @@ main {
   background-color: #f2d7b6;
   color: #644666;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .tienda_articulo_boton:hover {
