@@ -45,6 +45,17 @@
   }
 } */
 
+let carritoHTML = document.getElementById("carrito");
+carritoHTML.innerHTML = "<p>Tu carrito</p><div></div>";
+document.querySelector("#tiendaFanPage_Fila header #navbar_Extended-Left").append(carritoHTML);
+
+let carritoInner = document.querySelector("#tiendaFanPage_Fila header #navbar_Extended-Left #carrito div");
+carritoInner.className = "carrito-contenido";
+carritoInner.innerHTML = "<ul></ul>";
+
+let carritoList = document.querySelector("#tiendaFanPage_Fila header #navbar_Extended-Left #carrito .carrito-contenido ul");
+
+
 /* Al clickear en los botones + de cada procducto se añaden al carrito.
 Luego, al ir hasta la barra superior, al apretar el boton de la tarjeta de credito se suman 
 todos los productos seleccionados + su iva y luego se muestra el total por consola y por alert. */
@@ -67,7 +78,17 @@ class Producto {
 const productos = []
 function addToCart(codigo, nombre, id, precio) {
   productos.push(new Producto(codigo, nombre, id, precio));
+  for (const producto of productos) {
+    let carritoListLi = document.createElement("li");
+    carritoListLi.innerHTML = `<b> ${producto.nombre} </b> 
+                               <p> / ${producto.precio}</p>`;
+    document.querySelector("#tiendaFanPage_Fila header #navbar_Extended-Left #carrito .carrito-contenido ul").append(carritoListLi);
+  }
 }
+//Ya crea los li en donde tiene que, pero los loopea mal, agregando el nuevo + los viejos cuando solo
+// deberia agregar el nuevo
+
+
 
 // Una salida por consola para verificar el proceso
 console.log(productos);
