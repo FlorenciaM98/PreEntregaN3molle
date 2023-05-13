@@ -764,6 +764,41 @@ main {
   flex-direction: column;
 }
 
+.navbar-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border-top: 0.5rem solid #bf8275;
+  padding-top: 1rem;
+  width: 15rem;
+  max-height: 35rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.navbar-carrito p {
+  font-family: "Akira";
+  color: #171717;
+  font-size: 13px;
+}
+
+.carrito-contenido ul li {
+  font-family: "K2D", sans-serif !important;
+  background-color: #171717 !important;
+  border-radius: unset !important;
+  font-size: 1.3rem !important;
+  width: 14rem !important;
+  text-align: center !important;
+  color: #bababa !important;
+  height: fit-content !important;
+}
+.carrito-contenido ul li p {
+  margin: unset !important;
+  font-family: "K2D", sans-serif !important;
+  text-align: center;
+  color: #f2d7b6 !important;
+}
+
 #tiendaFanPage_Fila {
   display: flex;
   flex-direction: row;
@@ -971,7 +1006,7 @@ main {
     min-height: unset;
     width: -moz-available;
     width: -webkit-fill-available;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
   #navbar_Extended-Left img {
@@ -981,6 +1016,42 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .navbar-carrito {
+    flex-direction: row;
+    justify-content: center;
+    align-items: unset;
+    width: fit-content;
+    max-height: 10rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+  }
+  .navbar-carrito p {
+    margin-right: 1rem;
+    width: 16rem;
+    margin: unset !important;
+  }
+  .carrito-contenido {
+    width: 100%;
+  }
+  .carrito-contenido ul {
+    display: flex;
+    flex-direction: column;
+    width: auto !important;
+  }
+  .carrito-contenido ul li {
+    font-size: 1.2rem !important;
+    width: 100% !important;
+    text-align: center !important;
+    color: #bababa !important;
+    height: 2rem !important;
+    display: flex;
+    justify-content: space-between;
+  }
+  .carrito-contenido ul li p {
+    width: fit-content !important;
+    padding-right: 0.5rem;
   }
   .tienda_itemsContenedor {
     margin: 0;
