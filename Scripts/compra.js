@@ -1,17 +1,27 @@
 // Array de productos
-const productos = [];
+let productos = [];
 
-//Funcion para el localstore
-function inicio() {
-  productos = JSON.parse(localStorage.getItem("carroCompras"));
-
-  if (productos == null) {
-    productos = [];
-  }
-
+// Actualiza los datos en el local storage cuando se agrega un producto al carro, cuando se vacia el carro
+// y cuando se compran los productos
+function actualizarCarro(productos) {
   localStorage.setItem("carroCompras", JSON.stringify(productos));
 }
 
+//Funcion para buscar mi array en el local storage
+function inicio(productosViejos) {
+  productosViejos = JSON.parse(localStorage.getItem("carroCompras"));
+  productos = productosViejos;
+  // Muestra lo que esta guardado en local storage de la sesion anterior
+  console.log(localStorage.getItem("carroCompras"));
+  for (const producto of productos) {
+    let carritoListLi = document.createElement("li");
+    carritoListLi.innerHTML = `<b> ${producto.nombre} </b> 
+                             <p> ${producto.precio} / ${(producto.precio *= 1.21)}</p>`;
+    document.querySelector(".carrito-contenido ul").append(carritoListLi);
+  }
+
+  return productos;
+}
 
 //Crea el html para el carrito de compras
 let carritoHTML = document.getElementById("carrito");
@@ -46,10 +56,21 @@ function addToCart(codigo, nombre, id, precio) {
   carritoListLi.innerHTML = `<b> ${producto.nombre} </b> 
                              <p> ${producto.precio} / ${(productos[productos.length - 1].precio *= 1.21)}</p>`;
   document.querySelector(".carrito-contenido ul").append(carritoListLi);
+  actualizarCarro(productos);
 }
 
 // Una salida por consola para verificar el proceso
 console.log(productos);
+
+//Funcion que vacia el array y tambien el html del carrito
+function vaciarCarro(productos) {
+  while (productos.length != 0) {
+    productos.pop();
+  }
+  carritoList.innerHTML = " ";
+  console.log(productos);
+  actualizarCarro(productos);
+}
 
 // Funcion que recorre el array de productos para sumar uno a uno en una variable
 // llamada total. Finalmente una salida por alert para el usuario y una por consola para el
@@ -62,15 +83,8 @@ function comprar(productos) {
   }
   console.log(total);
   alert(total);
-}
-
-//Funcion que vacia el array y tambien el html del carrito
-function vaciarCarro(productos) {
-  while (productos.length != 0) {
-    productos.pop();
-  }
-  carritoList.innerHTML = " ";
-  console.log(productos);
+  vaciarCarro(productos);
+  actualizarCarro(productos);
 }
 
 // Los botones de cada item en la tienda
