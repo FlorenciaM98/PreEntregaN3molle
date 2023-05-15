@@ -11,8 +11,12 @@ function actualizarCarro(productos) {
 function inicio(productosViejos) {
   productosViejos = JSON.parse(localStorage.getItem("carroCompras"));
   productos = productosViejos;
+
   // Muestra lo que esta guardado en local storage de la sesion anterior
   console.log(localStorage.getItem("carroCompras"));
+  console.log(JSON.parse(localStorage.getItem("carroCompras")));  
+
+  // Añade a mi DOM lo que estaba en el local storage de la sesion anterior
   for (const producto of productos) {
     let carritoListLi = document.createElement("li");
     carritoListLi.innerHTML = `<b> ${producto.nombre} </b> 
@@ -33,11 +37,7 @@ carritoInner.innerHTML = "<ul></ul>";
 
 let carritoList = document.querySelector("#tiendaFanPage_Fila header #navbar_Extended-Left #carrito .carrito-contenido ul");
 
-/* Al clickear en los botones + de cada procducto se añaden al carrito.
-Luego, al ir hasta la barra superior, al apretar el boton de la tarjeta de credito se suman 
-todos los productos seleccionados + su iva y luego se muestra el total por consola y por alert. */
-
-// Clase que crea mis productos cuando los sumo
+// Clase que crea mis productos
 class Producto {
   constructor(codigo, nombre, id, precio) {
     this.codigo = codigo;
@@ -47,7 +47,7 @@ class Producto {
   }
 }
 
-// Funcion que agrega los productos seleccionados a dicho array y tambien al html creado para el carrito
+// Funcion que agrega los productos seleccionados a mi array y tambien al html creado para el carrito
 // ademas suma el iva al precio
 function addToCart(codigo, nombre, id, precio) {
   productos.push(new Producto(codigo, nombre, id, precio));
@@ -69,12 +69,13 @@ function vaciarCarro(productos) {
   }
   carritoList.innerHTML = " ";
   console.log(productos);
+
+  //Actualiza mi local storage
   actualizarCarro(productos);
 }
 
-// Funcion que recorre el array de productos para sumar uno a uno en una variable
-// llamada total. Finalmente una salida por alert para el usuario y una por consola para el
-// programador.
+// Funcion que recorre el array de productos para sumar uno a uno en una variable llamada total.
+//Finalmente una salida por alert para el usuario y una por consola para el programador.
 function comprar(productos) {
   let total = 0;
   for (let i = 0; i < productos.length; i++) {
@@ -83,7 +84,11 @@ function comprar(productos) {
   }
   console.log(total);
   alert(total);
+  
+  //Vacia mi carro de compras una vez la compra está realizada
   vaciarCarro(productos);
+ 
+  //Actualiza mi local storage
   actualizarCarro(productos);
 }
 
@@ -99,6 +104,7 @@ let boton6 = document.getElementById("ateezFeverZeroP1");
 let boton7 = document.getElementById("ateezTreasureVol1");
 let boton8 = document.getElementById("ateezTreasureMapToAnswerSanv");
 
+//Los eventos para ejecutar la funcion de agregarlos al carrito
 botonCompra.onclick = () => { comprar(productos);};
 botonVaciarCarro.onclick = () => { vaciarCarro(productos);};
 boton1.onclick = () => { addToCart("ateezFeverEpilogue", "Ateez Fever Epilogue", 1, 15000);};
