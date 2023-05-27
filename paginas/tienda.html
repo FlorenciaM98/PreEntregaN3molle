@@ -9,17 +9,18 @@
         <meta name="keywords"  content="ATEEZ, comercio, tienda, kpop, corea, importado, fanpage">
         <link rel="icon" type="image" href="../imagenes/Logo png.png">
 
-        <!-- Mi CSS y JS -->
+        <!-- Librerías -->
+        <script src="/Scripts/moment.js"></script>
+        <script src="https://kit.fontawesome.com/b93e5fed8c.js" crossorigin="anonymous"></script>
+
+        <!-- Mi CSS -->
         <link rel="stylesheet" href="../CSS/style.css" />
         
         <!-- Fuentes de google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=K2D:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&display=swap" rel="stylesheet"> 
-
-        <!-- Fuentes de iconos -->
-        <script src="https://kit.fontawesome.com/b93e5fed8c.js" crossorigin="anonymous"></script>
-
+        
         <title>Wonderland Store: Tienda</title>
 
         <!-- Bootstrap -->
@@ -47,7 +48,9 @@
                 <div class="tienda_contenedor">
                     <div class="tienda_tools">
                         <img src="../imagenes/Logo png.png" alt="Logotipo">
-                        <div>
+                        <div id="date" class="dateDiv"></div>
+                        <div>  
+                            <a id="botonVerCarro" title="Ver/Ocultar el carrito"><i class="fa-solid fa-eye"></i></a>
                             <a id="botonVaciarCarro" title="Vaciar el carrito"><i class="fa-solid fa-trash-can"></i></a>
                             <a id="botonCompra" title="Ir a pagar"><i class="fa-solid fa-credit-card"></i></a>
                         </div>    
@@ -123,6 +126,7 @@
                     </div>
                 </div> 
                 <script src="../Scripts/compra.js"></script>
+                <script src="/Scripts/date.js"></script>
             </main>
         </div>
         <footer class="footer_Chico">
