@@ -990,17 +990,6 @@ main {
   max-height: 90rem;
 }
 
-.dateDiv {
-  font-size: 1.6rem;
-  font-family: "Akira";
-  margin-right: auto;
-  margin-left: 1rem;
-}
-
-.ocultaCarro {
-  display: none;
-}
-
 @media (max-width: 1000px) or (max-height: 900px) {
   /* Tienda  y Fanpage responsive */
   #tiendaFanPage_Fila {
