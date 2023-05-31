@@ -11,6 +11,7 @@ function inicio(productosViejos) {
     }
 
   // Muestra lo que esta guardado en local storage de la sesion anterior
+  console.log("productos guardados")
   console.log(localStorage.getItem("carroCompras"));
   console.log(JSON.parse(localStorage.getItem("carroCompras")));  
 
