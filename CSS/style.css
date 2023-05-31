@@ -515,6 +515,7 @@ main {
   padding: 0.5rem;
   background-color: #bf8275;
   text-align: center;
+  cursor: pointer;
 }
 #navbar_Extended-Left a {
   text-transform: uppercase;
@@ -995,6 +996,50 @@ main {
   font-family: "Akira";
   margin-right: auto;
   margin-left: 1rem;
+}
+
+.catalogoDesc {
+  width: 15rem;
+  text-align: justify;
+  margin-top: 0.5rem;
+  font-family: "K2D", sans-serif;
+  color: #bababa;
+  font-size: 1.1rem;
+}
+
+.listaCatalogoCont {
+  position: fixed;
+  background: #644666;
+  height: 50rem;
+  width: 50rem;
+  left: 17rem;
+  top: 4.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.listaCatalogoCont div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #bf8275;
+  height: 3rem;
+  align-items: center;
+}
+.listaCatalogoCont div h4 {
+  font-family: "Akira";
+  font-size: 1.1rem;
+}
+.listaCatalogoCont div span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #bababa;
+}
+.listaCatalogoCont div:last-child {
+  border-bottom: none;
 }
 
 .ocultaCarro {

@@ -1,0 +1,18 @@
+[
+    { "codigo": "ateezFeverEpilogue", "nombre": "Ateez Fever Epilogue", "id": 1, "precio": 15000 },
+    { "codigo": "ateezSpinOffFtW", "nombre": "Ateez Spin of from the Witness", "id": 2, "precio": 10000 },
+    { "codigo": "ateezTreasureEp3Wave", "nombre": "Ateez treasure ep3 wave ver", "id": 3, "precio": 30000 },
+    { "codigo": "ateezTreasureEpilogue", "nombre": "Ateez treasure epilogue", "id": 4, "precio": 5000 },
+    { "codigo": "ateezBlackCatNero", "nombre": "Ateez black cat nero lim. ed.", "id": 5, "precio": 14000 },
+    { "codigo": "ateezFeverZeroP1", "nombre": "Ateez fever zero: part 1", "id": 6, "precio": 18200 },
+    { "codigo": "ateezTreasureVol1", "nombre": "Ateez treasure vol. 1 all to action", "id": 7, "precio": 3000 },
+    { "codigo": "ateezTreasureMapToAnswerSanv", "nombre": "Ateez treasure map to answer San ver.", "id": 8, "precio": 10500 },
+    { "codigo": "ateezTheWorldEP2outlaw", "nombre": "Ateez The World EP. 2 Outlaw", "id": 9, "precio": 31640 },
+    { "codigo": "ateezTheWorldEP2outlawDigiPack", "nombre": "Ateez The World EP. 2 Outlaw DigiPack ver.", "id": 10, "precio": 25235 },
+    { "codigo": "ateezTheWorldEP1movementZver", "nombre": "Ateez The World EP. 1 Movement Z ver.", "id": 11, "precio": 13450 },
+    { "codigo": "ateezTheWorldEP1movementDiaryVer", "nombre": "Ateez The World EP. 1 Movement Diary ver.", "id": 12, "precio": 17270 },
+    { "codigo": "ateezWorldTourTheFellowshipTshirt", "nombre": "Ateez World Tour The Fellowshop Break The wall anchor in Seoul T-shirt", "id": 13, "precio": 9450 },
+    { "codigo": "ateezOficialLightTinyVer2", "nombre": "Ateez Oficial LightTiny ver. 2", "id": 14, "precio": 34660 },
+    { "codigo": "ateezTheWorldEP1movementAver", "nombre": "Ateez The World EP. 1 Movement A ver.", "id": 15, "precio": 29880 },
+    { "codigo": "ateezWorldTourTheFellowshipHoodie", "nombre": "Ateez World Tour The Fellowshop Break The wall anchor in Seoul Hoodie", "id": 16, "precio": 13160 }
+]

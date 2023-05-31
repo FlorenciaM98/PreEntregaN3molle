@@ -1,7 +1,8 @@
 // Array de productos
 let productos = [];
 
-//Funcion para buscar mi array en el local storage
+//Funcion que se ejecuta al cargar la pagina, busca mi array en el local storage
+//y trae con fetch mis productos
 function inicio(productosViejos) {
   if (localStorage.getItem("carroCompras")) {
     productosViejos = JSON.parse(localStorage.getItem("carroCompras"));
@@ -11,7 +12,6 @@ function inicio(productosViejos) {
     }
 
   // Muestra lo que esta guardado en local storage de la sesion anterior
-  console.log("productos guardados")
   console.log(localStorage.getItem("carroCompras"));
   console.log(JSON.parse(localStorage.getItem("carroCompras")));  
 
@@ -22,15 +22,48 @@ function inicio(productosViejos) {
                              <p> ${producto.precio} / ${(producto.precio *= 1.21)}</p>`;
     document.querySelector(".carrito-contenido ul").append(carritoListLi);
   }
-
+  
   return productos;
-}
+};
+
+//Trabajo con mi promesa para buscar los productos en mi .json
+
+const lista = document.querySelector('#listaSimplificada');
+
+var BD = fetch('../datos/productos.json').then((res) => res.json());
+console.log(BD);
+
+const pedirProductos = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(BD)
+    }, 2500)
+  })
+};
+
+const renderProductos = (arr) => {
+  fetch('../datos/productos.json').then((res) => res.json()).then((data) => {
+    data.forEach((producto) => {
+      const li = document.createElement('div')
+      li.innerHTML = `<h4>${producto.nombre}</h4>
+        <span>${producto.precio}</span>`
+      lista.append(li)
+    })
+  })
+  console.log(arr);
+};
+
+// asincrónicamente pedimos los datos y generamos la vista
+pedirProductos().then((res) => {
+  catalogo = res
+  renderProductos(catalogo)
+});
 
 // Actualiza los datos en el local storage cuando se agrega un producto al carro, cuando se vacia el carro
 // y cuando se compran los productos
 function actualizarCarro(productos) {
   localStorage.setItem("carroCompras", JSON.stringify(productos));
-}
+};
 
 //Crea el html para el carrito de compras
 let carritoHTML = document.getElementById("carrito"); 
@@ -50,7 +83,7 @@ class Producto {
     this.id = id;
     this.precio = parseFloat(precio);
   }
-}
+};
 
 // Funcion que agrega los productos seleccionados a mi array y tambien al html creado para el carrito
 // ademas suma el iva al precio
@@ -62,7 +95,7 @@ function addToCart(codigo, nombre, id, precio) {
                              <p> ${producto.precio} / ${(productos[productos.length - 1].precio *= 1.21)}</p>`;
   document.querySelector(".carrito-contenido ul").append(carritoListLi);
   actualizarCarro(productos);
-}
+};
 
 // Una salida por consola para verificar el proceso
 console.log(productos);
@@ -77,7 +110,7 @@ function vaciarCarro(productos) {
 
   //Actualiza mi local storage
   actualizarCarro(productos);
-}
+};
 
 // Funcion que recorre el array de productos para sumar uno a uno en una variable llamada total.
 //Finalmente una salida por alert para el usuario y una por consola para el programador.
@@ -95,14 +128,22 @@ function comprar(productos) {
  
   //Actualiza mi local storage
   actualizarCarro(productos);
-}
+};
 
 //Funcion para ver u ocultar el carro
 
 function visibilidadCarro() {
   var element = document.getElementById("carrito");
   element.classList.toggle("ocultaCarro");
-}
+};
+
+//oculto y muestro mi catalogo completo traido desde mi .json
+document.getElementById("abreListaS").addEventListener("click", catalogoToggle);
+
+function catalogoToggle() {
+  var visible = document.getElementById("listaSimplificada");
+  visible.classList.toggle("ocultaCarro");
+};
 
 // Los botones de cada item en la tienda
 let botonCompra = document.getElementById("botonCompra");
@@ -129,9 +170,3 @@ boton5.onclick = () => { addToCart("ateezBlackCatNero", "Ateez black cat nero li
 boton6.onclick = () => { addToCart("ateezFeverZeroP1", "Ateez fever zero: part 1", 6, 18200);};
 boton7.onclick = () => { addToCart("ateezTreasureVol1", "Ateez treasure vol. 1 all to action", 7, 3000);};
 boton8.onclick = () => { addToCart("ateezTreasureMapToAnswerSanv", "Ateez treasure map to answer San ver.", 8, 10500);};
-
-
-
-
-//me quedan las dos ultimas clases
-//error de que se duplican los precios al recargar la pagina
